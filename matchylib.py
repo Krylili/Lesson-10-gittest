@@ -33,21 +33,39 @@ def is_base_match(base1: str, base2: str) -> (bool, int):
     return base1 == base2, BASEMATCH_NOERROR
 
 
+BASECOMPL_DICT = {"A": ["T", "U"], 
+                  "T": "A", 
+                  "G": "C", 
+                  "C": "G",
+                  "U": "A"}
+
 def is_complement_base(base1: str, base2: str) -> (bool, int):
+    if base1 in BASECOMPL_DICT:
+        if base2 in BASECOMPL_DICT[base1]:
+            return True, 0
+        
     return False, 0
 
 
 if __name__ == "__main__":
 
+    print(is_complement_base("A", "T"))
+    print(is_complement_base("C", "G"))
+    print(is_complement_base("A", "G"))
+    print(is_complement_base("U", "A"))
+    print(is_complement_base("C", "A"))
+    print(is_complement_base("T", "A"))
+    print(is_complement_base("A", "U"))
+    
     #print(is_base_match("A", "A"))
     #print(is_base_match("C", "C"))
     #print(is_base_match("G", "G"))
     #print(is_base_match("T", "T"))    
     
-    print(is_base_match("B", "Y"))  
-    print(is_base_match("B", "Y"))  
-    print(is_base_match("B", "C"))  
-    print(is_base_match("B", "T"))
+    #(is_base_match("B", "Y"))  
+    #print(is_base_match("B", "Y"))  
+    #print(is_base_match("B", "C"))  
+    #print(is_base_match("B", "T"))
     
     #print(is_base_match("A", "N"), "A matches or not matches any base.")
     #print(is_base_match("X", "N"), "X matches or not matches any base.")
