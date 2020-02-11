@@ -37,7 +37,8 @@ BASECOMPL_DICT = {"A": ["T", "U"],
                   "T": "A", 
                   "G": "C", 
                   "C": "G",
-                  "U": "A"}
+                  "U": "A",
+                  "N": ["A", "G", "C", "T", "U"]}
 
 def is_complement_base(base1: str, base2: str) -> (bool, int):
     if base1 in BASECOMPL_DICT:
@@ -53,9 +54,9 @@ if __name__ == "__main__":
     print(is_complement_base("C", "G"))
     print(is_complement_base("A", "G"))
     print(is_complement_base("U", "A"))
-    print(is_complement_base("C", "A"))
-    print(is_complement_base("T", "A"))
-    print(is_complement_base("A", "U"))
+    print(is_complement_base("N", "A"))
+    print(is_complement_base("N", "A"))
+    print(is_complement_base("N", "U"))
     
     #print(is_base_match("A", "A"))
     #print(is_base_match("C", "C"))
