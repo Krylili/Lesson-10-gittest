@@ -33,6 +33,10 @@ def is_base_match(base1: str, base2: str) -> (bool, int):
     return base1 == base2, BASEMATCH_NOERROR
 
 
+def is_complement_base(base1: str, base2: str) -> (bool, int):
+    return False, 0
+
+
 if __name__ == "__main__":
 
     #print(is_base_match("A", "A"))
