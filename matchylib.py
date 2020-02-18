@@ -57,7 +57,7 @@ if __name__ == "__main__":
     print(is_complement_base("N", "A"))
     print(is_complement_base("N", "A"))
     print(is_complement_base("N", "U"))
-    
+    print (is_complement_base("X","T"))
     #print(is_base_match("A", "A"))
     #print(is_base_match("C", "C"))
     #print(is_base_match("G", "G"))
